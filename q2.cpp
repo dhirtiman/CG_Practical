@@ -1,3 +1,5 @@
+//Midpoint circle drawing algorithm
+
 #include<stdio.h>
 #include<conio.h>
 #include<graphics.h>
