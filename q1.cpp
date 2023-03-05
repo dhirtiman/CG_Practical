@@ -3,25 +3,29 @@
 #include <graphics.h>
 int main()
 {
-    int x, y, x1, y1, x2, y2, p, dx, dy;
     int gdriver = DETECT, gmode;
     initgraph(&gdriver, &gmode, (char *)"");
-    printf("\nEnter the x-coordinate of the first point ::");
-    scanf("%d", &x1);
-    printf("\nEnter the y-coordinate of the first point ::");
-    scanf("%d", &y1);
-    printf("\nEnter the x-coordinate of the second point ::");
-    scanf("%d", &x2);
-    printf("\nEnter the y-coordinate of the second point ::");
-    scanf("%d", &y2);
+
+    int x, y, x1, y1, x2, y2, p, dx, dy;
+
+    printf("Enter co-ordinates of first point: ");
+    scanf("%d%d", &x1, &y1);
+    printf("Enter co-ordinates of second point: ");
+    scanf("%d%d", &x2, &y2);
+
     x = x1;
     y = y1;
+
     dx = x2 - x1;
     dy = y2 - y1;
+
     putpixel(x, y, 2);
+
     p = (2 * dy - dx);
+
     while (x <= x2)
     {
+
         if (p < 0)
         {
             x = x + 1;
@@ -35,6 +39,7 @@ int main()
         }
         putpixel(x, y, 7);
     }
+
     getch();
     closegraph();
     return 0;
